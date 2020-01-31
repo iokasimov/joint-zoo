@@ -17,13 +17,9 @@ source-repository head
 
 library
   exposed-modules:
-  build-depends: base == 4.*, joint == 0.1.5
+    Control.Joint.Effects.Concurrent
+    Control.Joint.Effects.Transactional
+  build-depends: base == 4.*, joint == 0.1.5, async, stm
   default-language: Haskell2010
   ghc-options: -fno-warn-tabs
-  default-extensions:
-    LiberalTypeSynonyms
-    PackageImports
-    RankNTypes
-    TypeFamilies
-    TypeFamilyDependencies
-    TypeOperators
+  default-extensions: ConstraintKinds, PackageImports
