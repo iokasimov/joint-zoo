@@ -7,7 +7,7 @@ instance Composition Concurrently where
 	type Primary Concurrently a = IO a
 	run = runConcurrently
 
-instance Adaptable STM IO where
-	adapt = atomically
+instance Adaptable Concurrently IO where
+	adapt = runConcurrently
 
 type Concurrent = Liftable Concurrently
