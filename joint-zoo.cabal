@@ -19,7 +19,14 @@ library
   exposed-modules:
     Control.Joint.Effects.Concurrent
     Control.Joint.Effects.Transactional
+    Control.Joint.Effects.Filesystem
   build-depends: base == 4.*, joint == 0.1.5, async, stm
   default-language: Haskell2010
   ghc-options: -fno-warn-tabs
-  default-extensions: ConstraintKinds, MultiParamTypeClasses, PackageImports, TypeFamilies
+  default-extensions:
+    ConstraintKinds
+    FlexibleContexts
+    MultiParamTypeClasses
+    PackageImports
+    TypeApplications
+    TypeFamilies
